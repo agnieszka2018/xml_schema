@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://example.org/ksiegarnia"
+            xmlns="http://example.org/ksiegarnia"
+            elementFormDefault="qualified"
+            attributeFormDefault="qualified">
+    <xsd:annotation>
+        <xsd:documentation>
+            Zadanie 2, dokument XML Schema.
+        </xsd:documentation>
+    </xsd:annotation>
+    
+    <xsd:element name="księgarnia">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="info" />
+                <xsd:element ref="tytuł_strony" />
+                <xsd:element ref="modyfikacja" />
+                <xsd:element minOccurs="1" maxOccurs="1000" ref="dział" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="info" type="xsd:string" />
+    <xsd:element name="tytuł_strony" type="xsd:string" />
+    <xsd:element name="modyfikacja">
+        <xsd:complexType mixed="true">
+            <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="ukryta_wiadomość" />
+            </xsd:choice>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ukryta_wiadomość" type="xsd:string" />
+    <xsd:element name="dział">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="nazwa" />
+                <xsd:element minOccurs="1" maxOccurs="1000" ref="autor" />
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:ID" use="required" />
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="nazwa">
+        <xsd:complexType mixed="true">
+            <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="wiadomość" />
+            </xsd:choice>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="wiadomość" type="xsd:string5000" />
+    <xsd:simpleType name="string5000">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="0" />
+            <xsd:maxLength value="5000" />
+        </xsd:restriction>
+    </xsd:simpleType>    
+    <xsd:element name="autor">
+        <xsd:complexType mixed="true">
+            <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="książka" />
+            </xsd:choice>
+            <xsd:attribute name="autorId" type="xsd:ID" use="required" />
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="książka">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tytuł" />
+                <xsd:element ref="opis" />
+                <xsd:element ref="data_publikacji" />
+                <xsd:element ref="stron" />
+                <xsd:element ref="cena" />
+            </xsd:sequence>
+            <xsd:attribute name="książkaAutorId" type="xsd:IDREF" use="required" />
+            <xsd:attribute name="id" type="xsd:ID" use="required" />
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="tytuł" type="xsd:string" />
+    <xsd:element name="opis" type="xsd:string" />
+    <xsd:element name="data_publikacji" type="xsd:date" />
+    <xsd:element name="stron" type="xsd:positiveInteger" />
+    <xsd:element name="cena">
+        <xsd:complexType>
+            <xsd:simpleContent>
+                <xsd:extension base="xsd:string">
+                    <xsd:attribute default="PLN" name="waluta">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:NMTOKEN">
+                                <xsd:enumeration value="PLN" />
+                                <xsd:enumeration value="EUR" />
+                                <xsd:enumeration value="USD" />
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:attribute>
+                </xsd:extension>
+            </xsd:simpleContent>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
