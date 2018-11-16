@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<?xml-stylesheet type="text/css" href="style.css" ?>
 
-<!DOCTYPE księgarnia SYSTEM "ksiegarnia.dtd">
-
-<księgarnia>
-
+<księgarnia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://example.org/ksiegarnia xmlSchema_3.xsd"
+            xmlns="http://example.org/ksiegarnia">
     <info>
-        Agnieszka Baumann, Paweł Szrubas 
+        Autorzy
     </info>
-    <tytuł>
+    <tytuł_strony>
         &quot;KSIĘGARNIA&quot;
-    </tytuł>
+    </tytuł_strony>
 
     <modyfikacja>Najedź, aby sprawdzić datę ostatniej modyfikacji!<ukryta_wiadomość>Ostatnia modyfikacja: 2018-10-17</ukryta_wiadomość></modyfikacja>
 

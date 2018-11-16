@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://example.org/ksiegarnia" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ksiegarnia="http://example.org/ksiegarnia">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="xsi.xsd"/>
+  <xs:element name="księgarnia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ksiegarnia:info"/>
+        <xs:element ref="ksiegarnia:tytuł_strony"/>
+        <xs:element ref="ksiegarnia:modyfikacja"/>
+        <xs:element maxOccurs="unbounded" ref="ksiegarnia:dział"/>
+      </xs:sequence>
+      <xs:attribute ref="xsi:schemaLocation" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="info" type="xs:NCName"/>
+  <xs:element name="tytuł_strony" type="xs:string"/>
+  <xs:element name="modyfikacja">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ksiegarnia:ukryta_wiadomość"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ukryta_wiadomość" type="xs:string"/>
+  <xs:element name="dział">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ksiegarnia:nazwa"/>
+        <xs:element maxOccurs="unbounded" ref="ksiegarnia:autor"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nazwa">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ksiegarnia:wiadomość"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="wiadomość" type="xs:string"/>
+  <xs:element name="autor">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ksiegarnia:książka"/>
+      </xs:sequence>
+      <xs:attribute name="autorId" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="książka">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ksiegarnia:tytuł"/>
+        <xs:element ref="ksiegarnia:opis"/>
+        <xs:element ref="ksiegarnia:data_publikacji"/>
+        <xs:element ref="ksiegarnia:stron"/>
+        <xs:element ref="ksiegarnia:cena"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:attribute name="książkaAutorId" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="tytuł" type="xs:string"/>
+  <xs:element name="opis" type="xs:string"/>
+  <xs:element name="data_publikacji" type="xs:NMTOKEN"/>
+  <xs:element name="stron" type="xs:integer"/>
+  <xs:element name="cena">
+    <xs:complexType mixed="true">
+      <xs:attribute name="waluta" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
