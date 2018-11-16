@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://example.org/ksiegarnia"
+<xsd:schema targetNamespace="http://example.org/ksiegarnia"
             xmlns="http://example.org/ksiegarnia"
             elementFormDefault="qualified"
-            attributeFormDefault="qualified">
+            attributeFormDefault="qualified"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ksi="http://example.org/ksiegarnia">
+    
+    
     <xsd:annotation>
         <xsd:documentation>
             Zadanie 2, dokument XML Schema.
@@ -15,14 +18,20 @@
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element ref="info" />
-                <xsd:element ref="tytuł_strony" />
+                <xsd:element ref="tytuł" />
                 <xsd:element ref="modyfikacja" />
-                <xsd:element minOccurs="1" maxOccurs="1000" ref="dział" />
+                <xsd:element minOccurs="1" maxOccurs="500" ref="dział" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+    
+    
     <xsd:element name="info" type="xsd:string" />
-    <xsd:element name="tytuł_strony" type="xsd:string" />
+    
+    
+    <xsd:element name="tytuł" type="xsd:string" />
+    
+    
     <xsd:element name="modyfikacja">
         <xsd:complexType mixed="true">
             <xsd:choice minOccurs="0" maxOccurs="unbounded">
@@ -30,7 +39,11 @@
             </xsd:choice>
         </xsd:complexType>
     </xsd:element>
+    
+    
     <xsd:element name="ukryta_wiadomość" type="xsd:string" />
+    
+    
     <xsd:element name="dział">
         <xsd:complexType>
             <xsd:sequence>
@@ -53,7 +66,9 @@
             <xsd:minLength value="0" />
             <xsd:maxLength value="5000" />
         </xsd:restriction>
-    </xsd:simpleType>    
+    </xsd:simpleType>   
+    
+      
     <xsd:element name="autor">
         <xsd:complexType mixed="true">
             <xsd:choice minOccurs="0" maxOccurs="unbounded">
@@ -62,19 +77,25 @@
             <xsd:attribute name="autorId" type="xsd:ID" use="required" />
         </xsd:complexType>
     </xsd:element>
-    <xsd:element name="książka">
+   
+    <!-- przestrzeń nazw "ksi", bo powtrza się "tytuł" --> 
+    
+    <xsd:element name="książka"
+                 xmlns:ksi="http://example.org/ksiazka">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element ref="tytuł" />
-                <xsd:element ref="opis" />
-                <xsd:element ref="data_publikacji" />
-                <xsd:element ref="stron" />
-                <xsd:element ref="cena" />
+                <xsd:element ref="ksi:tytuł" minOccurs="1"/>
+                <xsd:element ref="opis" minOccurs="1"/>
+                <xsd:element ref="data_publikacji" minOccurs="1"/>
+                <xsd:element ref="stron" minOccurs="1"/>
+                <xsd:element ref="cena" minOccurs="1"/>
             </xsd:sequence>
             <xsd:attribute name="książkaAutorId" type="xsd:IDREF" use="required" />
             <xsd:attribute name="id" type="xsd:ID" use="required" />
         </xsd:complexType>
     </xsd:element>
+    
+    
     <xsd:element name="tytuł" type="xsd:string" />
     <xsd:element name="opis" type="xsd:string" />
     <xsd:element name="data_publikacji" type="xsd:date" />
@@ -96,4 +117,6 @@
             </xsd:simpleContent>
         </xsd:complexType>
     </xsd:element>
+    
+    
 </xsd:schema>
