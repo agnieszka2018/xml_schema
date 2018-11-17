@@ -96,7 +96,7 @@
     </xsd:element>
     
     
-    <xsd:element name="tytuł" type="xsd:string" />
+    <!--<xsd:element name="tytuł" type="xsd:string" /> -->
     <xsd:element name="opis" type="xsd:string" />
     <xsd:element name="data_publikacji" type="xsd:date" />
     <xsd:element name="stron" type="xsd:positiveInteger" />
