@@ -1,0 +1,61 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="księgarnia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:string" name="info"/>
+                <xs:element type="xs:string" name="tytuł_strony"/>
+                <xs:element name="modyfikacja">
+                    <xs:complexType mixed="true">
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="ukryta_wiadomość"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="dział" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nazwa">
+                               <xs:pattern value="\p{L}(\p{Ll})*">
+                                <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="wiadomość"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                               </xs:pattern>
+                            </xs:element>
+                            <xs:element name="autor" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                        <xs:element name="książka" maxOccurs="unbounded" minOccurs="0">
+                                            <xs:complexType>                                               
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="tytuł"/>
+                                                    <xs:element type="xs:string" name="opis"/>
+                                                    <xs:element type="xs:date" name="data_publikacji"/>
+                                                    <xs:element type="xs:short" name="stron"/>
+                                                    <xs:element name="cena">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:string" name="waluta" use="optional"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute type="xs:string" name="książkaAutorId" use="optional"/>
+                                                <xs:attribute type="xs:string" name="id" use="optional"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="autorId" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="id" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

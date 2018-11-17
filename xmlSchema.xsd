@@ -2,8 +2,7 @@
 
 <xsd:schema targetNamespace="http://example.org/ksiegarnia"
             xmlns="http://example.org/ksiegarnia"
-            elementFormDefault="qualified"
-            attributeFormDefault="qualified"
+            elementFormDefault="unqualified"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns:ksi="http://example.org/ksiegarnia">
     
