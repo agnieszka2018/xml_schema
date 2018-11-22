@@ -1,121 +1,162 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<xsd:schema targetNamespace="http://example.org/ksiegarnia"
-            xmlns="http://example.org/ksiegarnia"
-            elementFormDefault="unqualified"
-            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:ksi="http://example.org/ksiegarnia">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ksi="http://www.example.org/ksiegarnia"
+           targetNamespace="http://www.example.org/ksiegarnia"            
+           elementFormDefault="qualified">
     
-    
-    <xsd:annotation>
-        <xsd:documentation>
+    <!-- Adnotacja -->   
+    <xs:annotation>
+        <xs:documentation>
             Zadanie 2, dokument XML Schema.
-        </xsd:documentation>
-    </xsd:annotation>
+        </xs:documentation>
+    </xs:annotation>
     
-    <xsd:element name="księgarnia">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element ref="info" />
-                <xsd:element ref="tytuł" />
-                <xsd:element ref="modyfikacja" />
-                <xsd:element minOccurs="1" maxOccurs="500" ref="dział" />
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
+    <!-- Key, Keyref -->    
+    <xs:element name="księgarnia" type="ksi:księgarniaType">
+        <xs:key name="idDziałKey">
+            <xs:selector xpath="ksi:dział"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:key name="autorIdKey">
+            <xs:selector xpath="ksi:autor"/>
+            <xs:field xpath="@autorId"/>
+        </xs:key>
+        <xs:keyref name="książkaRefKey" refer="ksi:autorIdKey">
+            <xs:selector xpath="ksi:książka"/>
+            <xs:field xpath="@książkaAutorId"/>
+        </xs:keyref> 
+        <xs:key name="książkaIdKey">
+            <xs:selector xpath="ksi:książka"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+    </xs:element>
     
+    <!-- Typy danych -->  
+    <xs:complexType name="księgarniaType">
+        <xs:sequence>
+            <xs:element name="info" type="ksi:infoType" maxOccurs="1"/>
+            <xs:element name="tytułStrony" type="ksi:tytułStronyType" maxOccurs="1"/>   
+            <xs:element name="modyfikacja" type="ksi:modyfikacjaType" maxOccurs="1"/>
+            <xs:element name="dział" type="ksi:działType" maxOccurs="unbounded"/>                      
+        </xs:sequence>      
+    </xs:complexType> 
+           
+    <xs:simpleType name="infoType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="100" />
+        </xs:restriction>
+    </xs:simpleType> 
     
-    <xsd:element name="info" type="xsd:string" />
+    <xs:simpleType name="tytułStronyType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="100" />
+        </xs:restriction>
+    </xs:simpleType> 
     
+    <xs:complexType name="modyfikacjaType" mixed="true">    
+        <xs:sequence>
+            <xs:element name="ukryta_wiadomość" type="ksi:ukryta_wiadomośćType" maxOccurs="1"/> 
+        </xs:sequence>
+    </xs:complexType>
     
-    <xsd:element name="tytuł" type="xsd:string" />
+    <xs:simpleType name="ukryta_wiadomośćType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="100" />
+        </xs:restriction>
+    </xs:simpleType> 
+        
+    <xs:complexType name="działType">
+        <xs:sequence>
+            <xs:element name="nazwa" type="ksi:nazwaType" maxOccurs="1"/>
+            <xs:element name="autor" type="ksi:autorType" maxOccurs="unbounded"/>                           
+        </xs:sequence>             
+        <xs:attribute name="id" type="xs:string" use="required" />           
+    </xs:complexType> 
     
+    <xs:complexType name="nazwaType" mixed="true">    
+        <xs:sequence>
+            <xs:element name="wiadomość" type="ksi:wiadomośćType" maxOccurs="1"/> 
+        </xs:sequence>
+    </xs:complexType>
     
-    <xsd:element name="modyfikacja">
-        <xsd:complexType mixed="true">
-            <xsd:choice minOccurs="0" maxOccurs="unbounded">
-                <xsd:element ref="ukryta_wiadomość" />
-            </xsd:choice>
-        </xsd:complexType>
-    </xsd:element>
+    <xs:simpleType name="wiadomośćType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="500" />
+        </xs:restriction>
+    </xs:simpleType> 
     
-    
-    <xsd:element name="ukryta_wiadomość" type="xsd:string" />
-    
-    
-    <xsd:element name="dział">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element ref="nazwa" />
-                <xsd:element minOccurs="1" maxOccurs="1000" ref="autor" />
-            </xsd:sequence>
-            <xsd:attribute name="id" type="xsd:ID" use="required" />
-        </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="nazwa">
-        <xsd:complexType mixed="true">
-            <xsd:choice minOccurs="0" maxOccurs="unbounded">
-                <xsd:element ref="wiadomość" />
-            </xsd:choice>
-        </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="wiadomość" type="xsd:string5000" />
-    <xsd:simpleType name="string5000">
-        <xsd:restriction base="xsd:string">
-            <xsd:minLength value="0" />
-            <xsd:maxLength value="5000" />
-        </xsd:restriction>
-    </xsd:simpleType>   
-    
-      
-    <xsd:element name="autor">
-        <xsd:complexType mixed="true">
-            <xsd:choice minOccurs="0" maxOccurs="unbounded">
-                <xsd:element ref="książka" />
-            </xsd:choice>
-            <xsd:attribute name="autorId" type="xsd:ID" use="required" />
-        </xsd:complexType>
-    </xsd:element>
-   
-    <!-- przestrzeń nazw "ksi", bo powtrza się "tytuł" --> 
-    
-    <xsd:element name="książka"
-                 xmlns:ksi="http://example.org/ksiazka">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element ref="ksi:tytuł" minOccurs="1"/>
-                <xsd:element ref="opis" minOccurs="1"/>
-                <xsd:element ref="data_publikacji" minOccurs="1"/>
-                <xsd:element ref="stron" minOccurs="1"/>
-                <xsd:element ref="cena" minOccurs="1"/>
-            </xsd:sequence>
-            <xsd:attribute name="książkaAutorId" type="xsd:IDREF" use="required" />
-            <xsd:attribute name="id" type="xsd:ID" use="required" />
-        </xsd:complexType>
-    </xsd:element>
-    
-    
-    <!--<xsd:element name="tytuł" type="xsd:string" /> -->
-    <xsd:element name="opis" type="xsd:string" />
-    <xsd:element name="data_publikacji" type="xsd:date" />
-    <xsd:element name="stron" type="xsd:positiveInteger" />
-    <xsd:element name="cena">
-        <xsd:complexType>
-            <xsd:simpleContent>
-                <xsd:extension base="xsd:string">
-                    <xsd:attribute default="PLN" name="waluta">
-                        <xsd:simpleType>
-                            <xsd:restriction base="xsd:NMTOKEN">
-                                <xsd:enumeration value="PLN" />
-                                <xsd:enumeration value="EUR" />
-                                <xsd:enumeration value="USD" />
-                            </xsd:restriction>
-                        </xsd:simpleType>
-                    </xsd:attribute>
-                </xsd:extension>
-            </xsd:simpleContent>
-        </xsd:complexType>
-    </xsd:element>
+    <xs:complexType name="autorType" mixed="true">    
+        <xs:sequence>
+            <xs:element name="książka" type="ksi:książkaType" maxOccurs="unbounded"/> 
+        </xs:sequence>
+        <xs:attribute name="autorId" type="xs:string" use="required" />    
+    </xs:complexType>
     
     
-</xsd:schema>
+    <xs:complexType name="książkaType">
+        <xs:group ref="ksi:książkaElements"/>
+        <xs:attributeGroup ref="ksi:książkaAttr"/>
+    </xs:complexType>
+    
+    <xs:simpleType name="tytułType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="500" />
+        </xs:restriction>
+    </xs:simpleType> 
+    
+    <xs:simpleType name="opisType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="5000" />
+        </xs:restriction>
+    </xs:simpleType> 
+
+    <xs:simpleType name="stronType">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[0-9]{0,5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="cenaType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="ksi:waluta"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:simpleType name ="walutaAttr">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PLN" />
+            <xs:enumeration value="EUR" />
+            <xs:enumeration value="DOL" />
+        </xs:restriction>
+    </xs:simpleType>  
+    
+    <!-- Grupa elementów -->   
+    <xs:group name="książkaElements">
+        <xs:sequence>            
+            <xs:element name="tytuł" type="ksi:tytułType" /> 
+            <xs:element name="opis" type="ksi:opisType" /> 
+            <xs:element name="dataPublikacji" type="xs:date" /> 
+            <xs:element name="stron" type="ksi:stronType" />
+            <xs:element name="cena" type="ksi:cenaType" />             
+        </xs:sequence>
+    </xs:group>
+    
+    <!-- Grupa atrybutów --> 
+    <xs:attributeGroup name="książkaAttr">
+        <xs:attribute name="książkaAutorId" type="xs:string" use="required"/>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:attributeGroup>
+    
+    <xs:attribute name="waluta" type="ksi:walutaAttr"/> 
+    
+</xs:schema>
+ 

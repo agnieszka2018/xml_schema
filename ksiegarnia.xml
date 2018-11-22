@@ -1,376 +1,376 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<?xml-stylesheet type="text/css" href="style.css" ?>
 
-<księgarnia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:noNamespaceSchemaLocation="xmlSchema1.xsd">
+<ksi:księgarnia xmlns:ksi="http://www.example.org/ksiegarnia" 
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                xsi:schemaLocation="http://www.example.org/ksiegarnia xmlSchema.xsd">
 
-    <info>
-        Agnieszka Baumann, Paweł Szrubas 
-    </info>
-    <tytuł_strony>
+    <ksi:info>
+        Autorzy 
+    </ksi:info>
+    <ksi:tytułStrony>
         &quot;KSIĘGARNIA&quot;
-    </tytuł_strony>
+    </ksi:tytułStrony>
 
-    <modyfikacja>Najedź, aby sprawdzić datę ostatniej modyfikacji!<ukryta_wiadomość>Ostatnia modyfikacja: 2018-10-17</ukryta_wiadomość></modyfikacja>
+    <ksi:modyfikacja>Najedź, aby sprawdzić datę ostatniej modyfikacji!<ksi:ukryta_wiadomość>Ostatnia modyfikacja: 2018-10-23</ksi:ukryta_wiadomość></ksi:modyfikacja>
 
-    <dział id="fantastyka"> 
-        <nazwa>
+    <ksi:dział id="fantastyka"> 
+        <ksi:nazwa>
             Fantastyka
-            <wiadomość>
+            <ksi:wiadomość>
                 Fantastyka – gatunek literacki, a także filmowy, komiksowy, gier a niekiedy i malarstwa. Polega ona na kreowaniu świata przedstawionego, 
-                który w całości, lub w części różni się od rzeczywistości, na przykład przez dodanie elementów nadnaturalnych, lub stworzonej przez autora technologii.
-            </wiadomość>
-        </nazwa>
-        <autor autorId="AS"> Andrzej Sapkowski
-            <książka książkaAutorId="AS" id="pierwsza">
-                <tytuł>Miecz przeznaczenia</tytuł>
-                <opis>Wiedźmiński kodeks stawia tę sprawę w sposób jednoznaczny: wiedźminowi smoka zabijać się nie godzi. To gatunek zagrożony wymarciem. 
-                                Aczkolwiek w powszechnej opinii to gad najbardziej wredny. Na oszluzgi, widłogony i latawce kodeks polować przyzwala. Ale na smoki – nie. </opis>
-                <data_publikacji>1980-08-21</data_publikacji>
-                <stron>250</stron>
-                <cena waluta="PLN">30zł</cena>
-            </książka>
-            <książka książkaAutorId="AS" id="druga">
-                <tytuł>Ostatnie życzenie</tytuł>
-                <opis>Później mówiono, że człowiek ów nadszedł od północy, od Bramy Powroźniczej. Nie był stary, ale włosy miał zupełnie białe. Kiedy ściągnął 
-                                płaszcz, okazało się, że na pasie za plecami ma miecz. Białowłosego przywiodło do miasta królewskie orędzie: trzy tysiące orenów nagrody 
-                                za odczarowanie nękającej mieszkańców Wyzimy strzygi. Takie czasy nastały. </opis>
-                <data_publikacji>1980-08-21</data_publikacji>
-                <stron>250</stron>
-                <cena waluta="PLN">30zł</cena>
-            </książka>
-        </autor>
-        <autor autorId="DG"> Dmitrij Głuchowski
-            <książka książkaAutorId="DG" id="trzecia">
-                <tytuł> Metro 2033</tytuł>
-                <opis>Rok 2033. Świat po zagładzie nuklearnej. Ocalali walczą o przetrwanie w sieci moskiewskiego metra. Ich los trafia w ręce młodego Artema.</opis>
-                <data_publikacji>1980-08-21</data_publikacji>
-                <stron>250</stron>
-                <cena waluta="PLN">30zł</cena>
-            </książka>
-        </autor>
-    </dział>
-    <dział id="literatura_współczesna"> 
-        <nazwa>
+                który w całości, lub w części różni się od rzeczywistości, na przykład przez dodanie elementów nadnaturalnych, lub stworzonej przez ksi:autora technologii.
+            </ksi:wiadomość>
+        </ksi:nazwa>
+        <ksi:autor autorId="AS"> Andrzej Sapkowski
+            <ksi:książka książkaAutorId="AS" id="pierwsza">
+                <ksi:tytuł>Miecz przeznaczenia</ksi:tytuł>
+                <ksi:opis>Wiedźmiński kodeks stawia tę sprawę w sposób jednoznaczny: wiedźminowi smoka zabijać się nie godzi. To gatunek zagrożony wymarciem. 
+                    Aczkolwiek w powszechnej opinii to gad najbardziej wredny. Na oszluzgi, widłogony i latawce kodeks polować przyzwala. Ale na smoki – nie. </ksi:opis>
+                <ksi:dataPublikacji>1980-08-21</ksi:dataPublikacji>
+                <ksi:stron>250</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">30</ksi:cena>
+            </ksi:książka>
+            <ksi:książka książkaAutorId="AS" id="druga">
+                <ksi:tytuł>Ostatnie życzenie</ksi:tytuł>
+                <ksi:opis>Później mówiono, że człowiek ów nadszedł od północy, od Bramy Powroźniczej. Nie był stary, ale włosy miał zupełnie białe. Kiedy ściągnął 
+                    płaszcz, okazało się, że na pasie za plecami ma miecz. Białowłosego przywiodło do miasta królewskie orędzie: trzy tysiące orenów nagrody 
+                    za odczarowanie nękającej mieszkańców Wyzimy strzygi. Takie czasy nastały. </ksi:opis>
+                <ksi:dataPublikacji>1980-08-21</ksi:dataPublikacji>
+                <ksi:stron>250</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">30</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>
+        <ksi:autor autorId="DG"> Dmitrij Głuchowski
+            <ksi:książka książkaAutorId="DG" id="trzecia">
+                <ksi:tytuł> Metro 2033</ksi:tytuł>
+                <ksi:opis>Rok 2033. Świat po zagładzie nuklearnej. Ocalali walczą o przetrwanie w sieci moskiewskiego metra. Ich los trafia w ręce młodego Artema.</ksi:opis>
+                <ksi:dataPublikacji>1980-08-21</ksi:dataPublikacji>
+                <ksi:stron>250</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">30</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>
+    </ksi:dział>
+    <ksi:dział id="literatura_współczesna"> 
+        <ksi:nazwa>
             Literatura współczesna
-            <wiadomość>
+            <ksi:wiadomość>
                 Literatura współczesna - nazwa ta obejmuje ostatni okres literacki, trwający od wybuchu II wojny światowej we wrześniu 1939 r. do dnia dzisiejszego – jest to więc epoka niezamknięta; 
                 jej materiał literacki i krytyczny narasta. 
-            </wiadomość>
-        </nazwa>
-        <autor autorId="DT"> Donna Tartt
-            <książka książkaAutorId="DT" id="czwarta">
-                <tytuł>Szczygieł</tytuł>
-                <opis>Szczygieł, pilnie strzeżony symbol bezpowrotnie utraconego życia, będzie towarzyszył Theo w 
-                               nieustającej podróży: od ekskluzywnych apartamentów przy Park Avenue po rozpustę półświatka w Las Vegas.</opis>
-                <data_publikacji>2015-05-06</data_publikacji>
-                <stron>784</stron>
-                <cena waluta="PLN">48,99zł</cena>
-            </książka>
-            <książka książkaAutorId="DT" id="piąta">
-                <tytuł>Tajemna historia</tytuł>
-                <opis>Richard Papen rozpoczyna naukę w ekskluzywnym college’u w Nowej Anglii. Dołącza do grupy inteligentnych, ekscentrycznych
-                               studentów filologii klasycznej, którzy pod wodzą charyzmatycznego wykładowcy odkrywają sposób myślenia i życia niemający 
-                               nic wspólnego z monotonną egzystencją ich rówieśników.</opis>
-                <data_publikacji>2017-09-20</data_publikacji>
-                <stron>608</stron>
-                <cena waluta="PLN">37,99zł</cena>
-            </książka>
-        </autor>
-        <autor autorId="JDS"> J. D. Salinger
-            <książka książkaAutorId="JDS" id="szósta">
-                <tytuł>Buszujący w zbożu</tytuł>
-                <opis>Bohaterem 'Buszującego w zbożu' jest szesnastoletni uczeń, Holden Caulfield, który nie mogąc pogodzić się z otaczającą go 
-                               głupotą, podłością, a przede wszystkim zakłamaniem, ucieka z college`u i przez kilka dni 'buszuje' po Nowym Jorku, nim wreszcie 
-                               powróci do domu rodzinnego.</opis>
-                <data_publikacji>1951-07-16</data_publikacji>
-                <stron>277</stron>
-                <cena waluta="PLN">11,99zł</cena>
-            </książka>
-        </autor>
-        <autor autorId="NHL"> N. Harper Lee
-            <książka książkaAutorId="NHL" id="siódma">
-                <tytuł>Zabić drozda</tytuł>
-                <opis>Lata trzydzieste XX wieku, małe miasteczko na południu USA. Atticus Finch, adwokat i głowa rodziny, broni młodego Murzyna oskarżonego 
-                                o zgwałcenie biednej białej dziewczyny Mayelli Ewell. Prosta sprawa sądowa z powodu wszechpanującego rasizmu, urasta do rangi symbolu.</opis>
-                <data_publikacji>2015-10-20</data_publikacji>
-                <stron>424</stron>
-                <cena waluta="PLN">22,80zł</cena>
-            </książka>
-            <książka książkaAutorId="NHL" id="ósma">
-                <tytuł>Idź, postaw wartownika</tytuł>
-                <opis>Maycomb, Alabama. Dwudziestosześcioletnia Jean Louise Finch, zwana Skautem, powraca z Nowego Jorku w rodzinne strony, do starzejącego się ojca. 
-                                Na południu Stanów Zjednoczonych panuje zamęt polityczny;</opis>
-                <data_publikacji>2015-11-04</data_publikacji>
-                <stron>368</stron>
-                <cena waluta="PLN">30,72zł</cena>
-            </książka>
-        </autor>
-    </dział>
-    <dział id="kryminał">
-        <nazwa>
+            </ksi:wiadomość>
+        </ksi:nazwa>
+        <ksi:autor autorId="DT"> Donna Tartt
+            <ksi:książka książkaAutorId="DT" id="czwarta">
+                <ksi:tytuł>Szczygieł</ksi:tytuł>
+                <ksi:opis>Szczygieł, pilnie strzeżony symbol bezpowrotnie utraconego życia, będzie towarzyszył Theo w 
+                    nieustającej podróży: od ekskluzywnych apartamentów przy Park Avenue po rozpustę półświatka w Las Vegas.</ksi:opis>
+                <ksi:dataPublikacji>2015-05-06</ksi:dataPublikacji>
+                <ksi:stron>784</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">48,99</ksi:cena>
+            </ksi:książka>
+            <ksi:książka książkaAutorId="DT" id="piąta">
+                <ksi:tytuł>Tajemna historia</ksi:tytuł>
+                <ksi:opis>Richard Papen rozpoczyna naukę w ekskluzywnym college’u w Nowej Anglii. Dołącza do grupy inteligentnych, ekscentrycznych
+                    studentów filologii klasycznej, którzy pod wodzą charyzmatycznego wykładowcy odkrywają sposób myślenia i życia niemający 
+                    nic wspólnego z monotonną egzystencją ich rówieśników.</ksi:opis>
+                <ksi:dataPublikacji>2017-09-20</ksi:dataPublikacji>
+                <ksi:stron>608</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">37,99</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>
+        <ksi:autor autorId="JDS"> J. D. Salinger
+            <ksi:książka książkaAutorId="JDS" id="szósta">
+                <ksi:tytuł>Buszujący w zbożu</ksi:tytuł>
+                <ksi:opis>Bohaterem 'Buszującego w zbożu' jest szesnastoletni uczeń, Holden Caulfield, który nie mogąc pogodzić się z otaczającą go 
+                    głupotą, podłością, a przede wszystkim zakłamaniem, ucieka z college`u i przez kilka dni 'buszuje' po Nowym Jorku, nim wreszcie 
+                    powróci do domu rodzinnego.</ksi:opis>
+                <ksi:dataPublikacji>1951-07-16</ksi:dataPublikacji>
+                <ksi:stron>277</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">11,99</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>
+        <ksi:autor autorId="NHL"> N. Harper Lee
+            <ksi:książka książkaAutorId="NHL" id="siódma">
+                <ksi:tytuł>Zabić drozda</ksi:tytuł>
+                <ksi:opis>Lata trzydzieste XX wieku, małe miasteczko na południu USA. Atticus Finch, adwokat i głowa rodziny, broni młodego Murzyna oskarżonego 
+                    o zgwałcenie biednej białej dziewczyny Mayelli Ewell. Prosta sprawa sądowa z powodu wszechpanującego rasizmu, urasta do rangi symbolu.</ksi:opis>
+                <ksi:dataPublikacji>2015-10-20</ksi:dataPublikacji>
+                <ksi:stron>424</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">22,80</ksi:cena>
+            </ksi:książka>
+            <ksi:książka książkaAutorId="NHL" id="ósma">
+                <ksi:tytuł>Idź, postaw wartownika</ksi:tytuł>
+                <ksi:opis>Maycomb, Alabama. Dwudziestosześcioletnia Jean Louise Finch, zwana Skautem, powraca z Nowego Jorku w rodzinne ksi:strony, do starzejącego się ojca. 
+                    Na południu Stanów Zjednoczonych panuje zamęt polityczny;</ksi:opis>
+                <ksi:dataPublikacji>2015-11-04</ksi:dataPublikacji>
+                <ksi:stron>368</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">30,72</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>
+    </ksi:dział>
+    <ksi:dział id="kryminał">
+        <ksi:nazwa>
             Kryminał
-            <wiadomość>
+            <ksi:wiadomość>
                 Powieść kryminalna – odmiana powieści charakteryzująca się fabułą zorganizowaną wokół zbrodni, okoliczności dojścia do niej, dochodzenia oraz ujawnienia osoby sprawcy.
-            </wiadomość>
-        </nazwa>
-        <autor autorId="SK"> Stephen King
-            <książka książkaAutorId="SK" id="dziewiąta">
-                <tytuł>Zielona Mila</tytuł>
-                <opis>Akcja powieści, zbliżonej klimatem do głośnej noweli tego samego autora, toczy się w Ameryce lat 30. Jej bohaterowie to więźniowie oczekujący na 
-                                wykonanie kary śmierci i pilnujący ich strażnicy.</opis>
-                <data_publikacji>2017-05-31</data_publikacji>
-                <stron>416</stron>
-                <cena waluta="PLN">12,98zł</cena>
-            </książka>        
-            <książka książkaAutorId="SK" id="dziesiąta">
-                <tytuł>Lśnienie</tytuł>
-                <opis>To jeden z najlepszych współczesnych horrorów. Nastrój grozy i napięcia potęguje się w niej z każdą minutą. Pięcioletni chłopiec Danny znalazł 
-                                się z rodzicami w opustoszałym na zimie hotelu. Wrażliwe, obdarzone zdolnościami wizjonerskimi dziecko odbiera fluidy czające się w jego murach;</opis>
-                <data_publikacji>2009-10-13</data_publikacji>
-                <stron>520</stron>
-                <cena waluta="PLN">30,49zł</cena>
-            </książka>     
-            <książka książkaAutorId="SK" id="jedenasta">
-                <tytuł>Bastion</tytuł>
-                <opis>Najdłuższa i według powszechnych ocen najlepsza powieść w dorobku Stephena Kinga – apokaliptyczny thriller mistrza grozy.</opis>
-                <data_publikacji>2018-09-19</data_publikacji>
-                <stron>1166</stron>
-                <cena waluta="PLN">39,49zł</cena>
-            </książka>                
-        </autor> 
-        <autor autorId="RM"> Remigiusz Mróz
-            <książka książkaAutorId="RM" id="dwunasta">
-                <tytuł>Kontratyp</tytuł>
-                <opis>W drodze na Annapurnę, jeden z najgroźniejszych szczytów na świecie, ginie troje polskich wspinaczy. Ekipy ratunkowe odnajdują 
-                                jedynie przysypane śniegiem, poskręcane liny, ale nie trafiają na żaden inny ślad po grupie.</opis>
-                <data_publikacji>2018-09-19</data_publikacji>
-                <stron>532</stron>
-                <cena waluta="PLN">29,93zł</cena>
-            </książka>            
-        </autor>       
-    </dział>
-    <dział id="klasyka">
-        <nazwa>
+            </ksi:wiadomość>
+        </ksi:nazwa>
+        <ksi:autor autorId="SK"> Stephen King
+            <ksi:książka książkaAutorId="SK" id="dziewiąta">
+                <ksi:tytuł>Zielona Mila</ksi:tytuł>
+                <ksi:opis>Akcja powieści, zbliżonej klimatem do głośnej noweli tego samego autora, toczy się w Ameryce lat 30. Jej bohaterowie to więźniowie oczekujący na 
+                    wykonanie kary śmierci i pilnujący ich strażnicy.</ksi:opis>
+                <ksi:dataPublikacji>2017-05-31</ksi:dataPublikacji>
+                <ksi:stron>416</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">12,98</ksi:cena>
+            </ksi:książka>        
+            <ksi:książka książkaAutorId="SK" id="dziesiąta">
+                <ksi:tytuł>Lśnienie</ksi:tytuł>
+                <ksi:opis>To jeden z najlepszych współczesnych horrorów. Nastrój grozy i napięcia potęguje się w niej z każdą minutą. Pięcioletni chłopiec Danny znala 
+                    się z rodzicami w opustoszałym na zimie hotelu. Wrażliwe, obdarzone zdolnościami wizjonerskimi dziecko odbiera fluidy czające się w jego murach;</ksi:opis>
+                <ksi:dataPublikacji>2009-10-13</ksi:dataPublikacji>
+                <ksi:stron>520</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">30,49</ksi:cena>
+            </ksi:książka>     
+            <ksi:książka książkaAutorId="SK" id="jedenasta">
+                <ksi:tytuł>Bastion</ksi:tytuł>
+                <ksi:opis>Najdłuższa i według powszechnych ocen najlepsza powieść w dorobku Stephena Kinga – apokaliptyczny thriller mistrza grozy.</ksi:opis>
+                <ksi:dataPublikacji>2018-09-19</ksi:dataPublikacji>
+                <ksi:stron>1166</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">39,49</ksi:cena>
+            </ksi:książka>                
+        </ksi:autor> 
+        <ksi:autor autorId="RM"> Remigiusz Mróz
+            <ksi:książka książkaAutorId="RM" id="dwunasta">
+                <ksi:tytuł>Kontratyp</ksi:tytuł>
+                <ksi:opis>W drodze na Annapurnę, jeden z najgroźniejszych szczytów na świecie, ginie troje polskich wspinaczy. Ekipy ratunkowe odnajdują 
+                    jedynie przysypane śniegiem, poskręcane liny, ale nie trafiają na żaden inny ślad po grupie.</ksi:opis>
+                <ksi:dataPublikacji>2018-09-19</ksi:dataPublikacji>
+                <ksi:stron>532</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">29,93</ksi:cena>
+            </ksi:książka>            
+        </ksi:autor>       
+    </ksi:dział>
+    <ksi:dział id="klasyka">
+        <ksi:nazwa>
             Klasyka
-            <wiadomość>
+            <ksi:wiadomość>
                 Klasyka - dzieła sztuki i literatury z różnych okresów historycznych i stylów uznane za doskonałe.
-            </wiadomość>
-        </nazwa>
-        <autor autorId="HS"> Henryk Sienkiewicz
-            <książka książkaAutorId="HS" id="trzynasta">
-                <tytuł>Latarnik</tytuł>
-                <opis>Latarnik – nowela Henryka Sienkiewicza, która po raz pierwszy ukazała się w „Niwie” w 1881. Przedstawia historię Skawińskiego, 
-                                polskiego emigranta politycznego, który obsługiwał latarnię morską położoną na wyspie.</opis>
-                <data_publikacji>2017-11-20</data_publikacji>
-                <stron>24</stron>
-                <cena waluta="PLN">6,21zł</cena>
-            </książka>
-            <książka książkaAutorId="HS" id="czternasta">
-                <tytuł>Janko Muzykant</tytuł>
-                <opis>Nowela "Janko Muzykant" to klasyka literatury dziecięcej. Janko dorasta na polskiej wsi w czasach zaboru rosyjskiego. Ma niezwykły 
-                                talent muzyczny. Nie jest to jednak opowieść o wielkim sukcesie, lecz wzruszająca i smutna historia.</opis>
-                <data_publikacji>2018-01-31</data_publikacji>
-                <stron>32</stron>
-                <cena waluta="PLN">4,55zł</cena>
-            </książka>
-            <książka książkaAutorId="HS" id="piętnasta">
-                <tytuł>Quo Vadis</tytuł>
-                <opis>Głównym wątkiem powieści jest miłość Winicjusza i Ligii. Należą oni do dwóch odrębnych światów: Winicjusz jest patrycjuszem rzymskim, 
-                                Ligia zakładniczką pochodzącą z barbarzyńskiego plemienia Ligów, a także chrześcijanką. Wątek miłosny posiada liczne zwroty akcji: 
-                                ucieczkę Ligii, jej poszukiwania przez Winicjusza, próbę porwania, przemianę Winicjusza i przyjęcie przez niego chrztu, wreszcie 
-                                uwięzienie i cudowne ocalenie na arenie. </opis>
-                <data_publikacji>2003-01-01</data_publikacji>
-                <stron>459</stron>
-                <cena waluta="PLN">12,44zł</cena>
-            </książka>
-            <książka książkaAutorId="HS" id="szesnasta">
-                <tytuł>W pustyni i w puszczy</tytuł>
-                <opis>Najsłynniejsza powieść przygodowa Henryka Sienkiewicza skierowana do młodzieży. Czternastoletni Staś Tarkowski i ośmioletnia Nel 
-                                Rawlinson zostają uprowadzeni przez beduinów.</opis>
-                <data_publikacji>2002-01-01</data_publikacji>
-                <stron>312</stron>
-                <cena waluta="PLN">11,61zł</cena>
-            </książka>
-            <książka książkaAutorId="HS" id="siedemnasta">
-                <tytuł>Ogniem i mieczem</tytuł>
-                <opis>Pierwsza z trzech powieści historycznych będących częścią Trylogii, pisanej dla pokrzepienia serc przez Henryka Sienkiewicza 
-                                w latach 1884–1888. Akcja powieści rozgrywa się w latach 1648–1651, w okresie powstania Chmielnickiego na Ukrainie.</opis>
-                <data_publikacji>2009-01-01</data_publikacji>
-                <stron>592</stron>
-                <cena waluta="PLN">22,81zł</cena>
-            </książka>
-        </autor>
-        <autor autorId="JA"> Jane Austen
-            <książka książkaAutorId="JA" id="osiemnasta">
-                <tytuł>Duma i uprzedzenie</tytuł>
-                <opis>Na początku XIX wieku niezbyt zamożny ojciec pięciu córek nader często musiał zadawać sobie pytanie: kiedyż to w sąsiedztwie 
-                                pojawi się jakiś odpowiedni kawaler? A kiedy już się pojawił, następowały dalsze perypetie, które Jane Austen z upodobaniem opisywała.</opis>
-                <data_publikacji>2006-01-01</data_publikacji>
-                <stron>304</stron>
-                <cena waluta="PLN">17,49zł</cena>
-            </książka>   
-            <książka książkaAutorId="JA" id="dziewiętnasta">
-                <tytuł>Perswazje</tytuł>
-                <opis>Anna Elliot, skromna i delikatna, przed ośmiu laty za namową rodziny zerwała zaręczyny z przystojnym, lecz niezamożnym kapitanem Wentworthem. 
-                                Teraz ma lat dwadzieścia siedem i ponieważ odrzucała względy innych mężczyzn, wydaje się skazana na staropanieństwo.</opis>
-                <data_publikacji>2016-09-15</data_publikacji>
-                <stron>266</stron>
-                <cena waluta="PLN">21,99zł</cena>
-            </książka>     
-        </autor>
-    </dział>
-    <dział id="poezja">
-        <nazwa>
+            </ksi:wiadomość>
+        </ksi:nazwa>
+        <ksi:autor autorId="HS"> Henryk Sienkiewicz
+            <ksi:książka książkaAutorId="HS" id="trzynasta">
+                <ksi:tytuł>Latarnik</ksi:tytuł>
+                <ksi:opis>Latarnik – nowela Henryka Sienkiewicza, która po raz pierwszy ukazała się w „Niwie” w 1881. Przedstawia historię Skawińskiego, 
+                    polskiego emigranta politycznego, który obsługiwał latarnię morską położoną na wyspie.</ksi:opis>
+                <ksi:dataPublikacji>2017-11-20</ksi:dataPublikacji>
+                <ksi:stron>24</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">6,21</ksi:cena>
+            </ksi:książka>
+            <ksi:książka książkaAutorId="HS" id="czternasta">
+                <ksi:tytuł>Janko Muzykant</ksi:tytuł>
+                <ksi:opis>Nowela "Janko Muzykant" to klasyka literatury dziecięcej. Janko dorasta na polskiej wsi w czasach zaboru rosyjskiego. Ma niezwykły 
+                    talent muzyczny. Nie jest to jednak opowieść o wielkim sukcesie, lecz wzruszająca i smutna historia.</ksi:opis>
+                <ksi:dataPublikacji>2018-01-31</ksi:dataPublikacji>
+                <ksi:stron>32</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">4,55</ksi:cena>
+            </ksi:książka>
+            <ksi:książka książkaAutorId="HS" id="piętnasta">
+                <ksi:tytuł>Quo Vadis</ksi:tytuł>
+                <ksi:opis>Głównym wątkiem powieści jest miłość Winicjusza i Ligii. Należą oni do dwóch odrębnych światów: Winicjusz jest patrycjuszem rzymskim, 
+                    Ligia zakładniczką pochodzącą z barbarzyńskiego plemienia Ligów, a także chrześcijanką. Wątek miłosny posiada liczne zwroty akcji: 
+                    ucieczkę Ligii, jej poszukiwania przez Winicjusza, próbę porwania, przemianę Winicjusza i przyjęcie przez niego chrztu, wreszcie 
+                    uwięzienie i cudowne ocalenie na arenie. </ksi:opis>
+                <ksi:dataPublikacji>2003-01-01</ksi:dataPublikacji>
+                <ksi:stron>459</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">12,44</ksi:cena>
+            </ksi:książka>
+            <ksi:książka książkaAutorId="HS" id="szesnasta">
+                <ksi:tytuł>W pustyni i w puszczy</ksi:tytuł>
+                <ksi:opis>Najsłynniejsza powieść przygodowa Henryka Sienkiewicza skierowana do młodzieży. Czternastoletni Staś Tarkowski i ośmioletnia Nel 
+                    Rawlinson zostają uprowadzeni przez beduinów.</ksi:opis>
+                <ksi:dataPublikacji>2002-01-01</ksi:dataPublikacji>
+                <ksi:stron>312</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">11,61</ksi:cena>
+            </ksi:książka>
+            <ksi:książka książkaAutorId="HS" id="siedemnasta">
+                <ksi:tytuł>Ogniem i mieczem</ksi:tytuł>
+                <ksi:opis>Pierwsza z trzech powieści historycznych będących częścią Trylogii, pisanej dla pokrzepienia serc przez Henryka Sienkiewicza 
+                    w latach 1884–1888. Akcja powieści rozgrywa się w latach 1648–1651, w okresie powstania Chmielnickiego na Ukrainie.</ksi:opis>
+                <ksi:dataPublikacji>2009-01-01</ksi:dataPublikacji>
+                <ksi:stron>592</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">22,81</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>
+        <ksi:autor autorId="JA"> Jane Austen
+            <ksi:książka książkaAutorId="JA" id="osiemnasta">
+                <ksi:tytuł>Duma i uprzedzenie</ksi:tytuł>
+                <ksi:opis>Na początku XIX wieku niezbyt zamożny ojciec pięciu córek nader często musiał zadawać sobie pytanie: kiedyż to w sąsiedztwie 
+                    pojawi się jakiś odpowiedni kawaler? A kiedy już się pojawił, następowały dalsze perypetie, które Jane Austen z upodobaniem opisywała.</ksi:opis>
+                <ksi:dataPublikacji>2006-01-01</ksi:dataPublikacji>
+                <ksi:stron>304</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">17,49</ksi:cena>
+            </ksi:książka>   
+            <ksi:książka książkaAutorId="JA" id="dziewiętnasta">
+                <ksi:tytuł>Perswazje</ksi:tytuł>
+                <ksi:opis>Anna Elliot, skromna i delikatna, przed ośmiu laty za namową rodziny zerwała zaręczyny z przystojnym, lecz niezamożnym kapitanem Wentworthem. 
+                    Teraz ma lat dwadzieścia siedem i ponieważ odrzucała względy innych mężczyzn, wydaje się skazana na staropanieństwo.</ksi:opis>
+                <ksi:dataPublikacji>2016-09-15</ksi:dataPublikacji>
+                <ksi:stron>266</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">21,99</ksi:cena>
+            </ksi:książka>     
+        </ksi:autor>
+    </ksi:dział>
+    <ksi:dział id="poezja">
+        <ksi:nazwa>
             Poezja
-            <wiadomość>
+            <ksi:wiadomość>
                 Poezja - to część literatury pięknej obejmująca utwory wierszowane w odróżnieniu od prozy.
-            </wiadomość>
-        </nazwa>
-        <autor autorId="JK"> Jan Kochanowski
-            <książka książkaAutorId="JK" id="dwudziesta">
-                <tytuł>Fraszki</tytuł>
-                <opis>Nieprzepłacone fraszki Jana Kochanowskiego są licznym świadectwem epoki niezwykle ważnej w dziejach i polskiej, i europejskiej kultury. 
-                               Oczywiście są one dla nas wciąż żywą, czytywaną bynajmniej nie tylko z obowiązku, literaturą.</opis>
-                <data_publikacji>2008-11-12</data_publikacji>
-                <stron>204</stron>
-                <cena waluta="PLN">10,00zł</cena>
-            </książka>                
-        </autor>
-        <autor autorId="WSZ"> Wisława Szymborska
-            <książka książkaAutorId="WSZ" id="dwudziesta_pierwsza">
-                <tytuł>Wielka liczba</tytuł>
-                <opis>Zbiór wierszy przyszłej noblistki. Tomik z 1976 roku.</opis>
-                <data_publikacji>1976-01-01</data_publikacji>
-                <stron>43</stron>
-                <cena waluta="PLN">20,00zł</cena>
-            </książka>      
-            <książka książkaAutorId="WSZ" id="dwudziesta_druga">
-                <tytuł>Milczenie roślin</tytuł>
-                <opis>Najnowszy wybór wierszy polskiej Noblistki oscylujący głównie wokół tematów związanych z naturą. Głębokie, mądre teksty niezwykle 
-                                harmonijnie współgrają tu z przepiękną oprawą graficzną. Jej główny element stanowią nastrojowe fotografie wybrane przez samą poetkę.</opis>
-                <data_publikacji>2011-11-14</data_publikacji>
-                <stron>44</stron>
-                <cena waluta="PLN">19,49zł</cena>
-            </książka>   
-            <książka książkaAutorId="WSZ" id="dwudziesta_trzecia">
-                <tytuł>Błysk rewolweru</tytuł>
-                <opis>Eljanna i jej dwóch "nażeczonych" to bohaterowie romansu kryminalnego, którego autorką jest Wisława Szymborska! 
-                                Dzieło to – najprawdopodobniej pierwsza proza przyszłej noblistki – spoczywało na dnie szuflady.</opis>
-                <data_publikacji>2013-01-01</data_publikacji>
-                <stron>144</stron>
-                <cena waluta="PLN">26,37zł</cena>
-            </książka>               
-        </autor>
-    </dział>
-    <dział id="biografia">
-        <nazwa>
+            </ksi:wiadomość>
+        </ksi:nazwa>
+        <ksi:autor autorId="JK"> Jan Kochanowski
+            <ksi:książka książkaAutorId="JK" id="dwudziesta">
+                <ksi:tytuł>Fraszki</ksi:tytuł>
+                <ksi:opis>Nieprzepłacone fraszki Jana Kochanowskiego są licznym świadectwem epoki niezwykle ważnej w dziejach i polskiej, i europejskiej kultury. 
+                    Oczywiście są one dla nas wciąż żywą, czytywaną bynajmniej nie tylko z obowiązku, literaturą.</ksi:opis>
+                <ksi:dataPublikacji>2008-11-12</ksi:dataPublikacji>
+                <ksi:stron>204</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">10,00</ksi:cena>
+            </ksi:książka>                
+        </ksi:autor>
+        <ksi:autor autorId="WSZ"> Wisława Szymborska
+            <ksi:książka książkaAutorId="WSZ" id="dwudziesta_pierwsza">
+                <ksi:tytuł>Wielka liczba</ksi:tytuł>
+                <ksi:opis>Zbiór wierszy przyszłej noblistki. Tomik z 1976 roku.</ksi:opis>
+                <ksi:dataPublikacji>1976-01-01</ksi:dataPublikacji>
+                <ksi:stron>43</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">20,00</ksi:cena>
+            </ksi:książka>      
+            <ksi:książka książkaAutorId="WSZ" id="dwudziesta_druga">
+                <ksi:tytuł>Milczenie roślin</ksi:tytuł>
+                <ksi:opis>Najnowszy wybór wierszy polskiej Noblistki oscylujący głównie wokół tematów związanych z naturą. Głębokie, mądre teksty niezwykle 
+                    harmonijnie współgrają tu z przepiękną oprawą graficzną. Jej główny element stanowią nastrojowe fotografie wybrane przez samą poetkę.</ksi:opis>
+                <ksi:dataPublikacji>2011-11-14</ksi:dataPublikacji>
+                <ksi:stron>44</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">19,49</ksi:cena>
+            </ksi:książka>   
+            <ksi:książka książkaAutorId="WSZ" id="dwudziesta_trzecia">
+                <ksi:tytuł>Błysk rewolweru</ksi:tytuł>
+                <ksi:opis>Eljanna i jej dwóch "nażeczonych" to bohaterowie romansu kryminalnego, którego autorką jest Wisława Szymborska! 
+                    Dzieło to – najprawdopodobniej pierwsza proza przyszłej noblistki – spoczywało na dnie szuflady.</ksi:opis>
+                <ksi:dataPublikacji>2013-01-01</ksi:dataPublikacji>
+                <ksi:stron>144</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">26,37</ksi:cena>
+            </ksi:książka>               
+        </ksi:autor>
+    </ksi:dział>
+    <ksi:dział id="biografia">
+        <ksi:nazwa>
             Biografia
-            <wiadomość>
+            <ksi:wiadomość>
                 Biografia - opis życia postaci autentycznej, który może mieć charakter naukowy, literacki lub popularyzatorski.
-            </wiadomość>
-        </nazwa>
-        <autor autorId="AF"> Anne Frank
-            <książka książkaAutorId="AF" id="dwudziesta_czwarta">
-                <tytuł>Dziennik</tytuł>
-                <opis>II wojna światowa. Zwykłe mieszkanie w centrum Amsterdamu nagle staje się schronieniem, więzieniem i całym światem dla żydowskiej nastolatki Anne, 
-                                jej rodziny i znajomych. Przez ponad dwa lata, w ciągłym strachu przed wykryciem, próbują oni normalnie żyć, łagodzić codzienne konflikty, doceniać małe radości.</opis>
-                <data_publikacji>2015-01-14</data_publikacji>
-                <stron>320</stron>
-                <cena waluta="PLN">23,36zł</cena>
-            </książka>
-        </autor>
-        <autor autorId="SD"> Salvador Dali
-            <książka książkaAutorId="SD" id="dwudziesta_piąta">
-                <tytuł>Moje sekretne życie</tytuł>
-                <opis>"W wieku sześciu lat chciałem zostać kucharką. Gdy miałem siedem - Napoleonem. Odtąd moja ambicja nie przestawała rosnąć, podobnie jak moja mania wielkości" - tak zaczyna się 
-                                ta niezwykła, przeraźliwie szczera i wręcz ekshibicjonistyczna opowieść Dalego o Dalim.</opis>
-                <data_publikacji>2013-09-23</data_publikacji>
-                <stron>400</stron>
-                <cena waluta="PLN">17,60zł</cena>
-            </książka>
-        </autor>
-    </dział>
-    <dział id="satyra">
-        <nazwa>
+            </ksi:wiadomość>
+        </ksi:nazwa>
+        <ksi:autor autorId="AF"> Anne Frank
+            <ksi:książka książkaAutorId="AF" id="dwudziesta_czwarta">
+                <ksi:tytuł>Dziennik</ksi:tytuł>
+                <ksi:opis>II wojna światowa. Zwykłe mieszkanie w centrum Amsterdamu nagle staje się schronieniem, więzieniem i całym światem dla żydowskiej nastolatki Anne, 
+                    jej rodziny i znajomych. Przez ponad dwa lata, w ciągłym strachu przed wykryciem, próbują oni normalnie żyć, łagodzić codzienne konflikty, doceniać małe radości.</ksi:opis>
+                <ksi:dataPublikacji>2015-01-14</ksi:dataPublikacji>
+                <ksi:stron>320</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">23,36</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>
+        <ksi:autor autorId="SD"> Salvador Dali
+            <ksi:książka książkaAutorId="SD" id="dwudziesta_piąta">
+                <ksi:tytuł>Moje sekretne życie</ksi:tytuł>
+                <ksi:opis>"W wieku sześciu lat chciałem zostać kucharką. Gdy miałem siedem - Napoleonem. Odtąd moja ambicja nie przestawała rosnąć, podobnie jak moja mania wielkości" - tak zaczyna się 
+                    ta niezwykła, przeraźliwie szczera i wręcz ekshibicjonistyczna opowieść Dalego o Dalim.</ksi:opis>
+                <ksi:dataPublikacji>2013-09-23</ksi:dataPublikacji>
+                <ksi:stron>400</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">17,60</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>
+    </ksi:dział>
+    <ksi:dział id="satyra">
+        <ksi:nazwa>
             Satyra
-            <wiadomość>
+            <ksi:wiadomość>
                 Satyra - gatunek literacki lub publicystyczny łączący w sobie epikę, lirykę i dramat wywodzący się ze starożytności, który ośmiesza i piętnuje ukazywane w niej zjawiska, obyczaje, politykę, grupy lub stosunki społeczne.
-            </wiadomość>
-        </nazwa>
-        <autor autorId="JTAS"> Julian Tuwim, Antoni Słonimski
-            <książka książkaAutorId="JTAS" id="dwudziesta_szósta">
-                <tytuł>W oparach absurdu</tytuł>
-                <opis>Tom satyrycznych tekstów Juliana Tuwima i Antoniego Słonimskiego pisanych w latach 1920-1936.</opis>
-                <data_publikacji>2008-01-01</data_publikacji>
-                <stron>190</stron>
-                <cena waluta="PLN">24,83zł</cena>
-            </książka>
-        </autor>   
-        <autor autorId="TPGJ"> Terry Pratchett, Gray Jolliffe
-            <książka książkaAutorId="TPGJ" id="dwudziesta_siódma">
-                <tytuł>Kot w stanie czystym</tytuł>
-                <opis>Prawdziwy kot... Prawdziwe koty nigdy nie jedzą z miseczek (a przynajmniej z takich, które są oznaczone DLA KOTA). Prawdziwe koty nigdy nie noszą obroży przeciw pchłom... 
-                                ani nie pojawiają się na kartkach urodzinowych... ani nie gonią niczego, co ma w środku dzwoneczek. Prawdziwe koty jedzą tarty. I podroby. I masło. 
-                                I wszystko inne, co zostanie na stole.</opis>
-                <data_publikacji>2005-11-10</data_publikacji>
-                <stron>116</stron>
-                <cena waluta="PLN">17,99zł</cena>
-            </książka>
-        </autor>           
-    </dział>
-    <dział id="tragedia">
-        <nazwa> 
+            </ksi:wiadomość>
+        </ksi:nazwa>
+        <ksi:autor autorId="JTAS"> Julian Tuwim, Antoni Słonimski
+            <ksi:książka książkaAutorId="JTAS" id="dwudziesta_szósta">
+                <ksi:tytuł>W oparach absurdu</ksi:tytuł>
+                <ksi:opis>Tom satyrycznych tekstów Juliana Tuwima i Antoniego Słonimskiego pisanych w latach 1920-1936.</ksi:opis>
+                <ksi:dataPublikacji>2008-01-01</ksi:dataPublikacji>
+                <ksi:stron>190</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">24,83</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>   
+        <ksi:autor autorId="TPGJ"> Terry Pratchett, Gray Jolliffe
+            <ksi:książka książkaAutorId="TPGJ" id="dwudziesta_siódma">
+                <ksi:tytuł>Kot w stanie czystym</ksi:tytuł>
+                <ksi:opis>Prawdziwy kot... Prawdziwe koty nigdy nie jedzą z miseczek (a przynajmniej z takich, które są oznaczone DLA KOTA). Prawdziwe koty nigdy nie noszą obroży przeciw pchłom... 
+                    ani nie pojawiają się na kartkach urodzinowych... ani nie gonią niczego, co ma w środku dzwoneczek. Prawdziwe koty jedzą tarty. I podroby. I masło. 
+                    I wszystko inne, co zostanie na stole.</ksi:opis>
+                <ksi:dataPublikacji>2005-11-10</ksi:dataPublikacji>
+                <ksi:stron>116</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">17,99</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>           
+    </ksi:dział>
+    <ksi:dział id="tragedia">
+        <ksi:nazwa> 
             Tragedia
-            <wiadomość>
+            <ksi:wiadomość>
                 Tragedia to utwór dramatyczny, w którym ośrodkiem akcji jest nieprzezwyciężalny i kończący się nieuchronną klęską konflikt wybitnej jednostki z siłami wyższymi – losem, fatum, prawami historii, prawami moralnymi, czy prawami społecznymi. 
-            </wiadomość>
-        </nazwa>
-        <autor autorId="SO"> Sofokles
-            <książka książkaAutorId="SO" id="dwudziesta_ósma">
-                <tytuł>Antygona</tytuł>
-                <opis>Antygona to dzieło o charakterze uniwersalnym niesie przekaz aktualny zawsze i wszędzie. Heroiczna bohaterka Sofoklesa przekonuje o istnieniu odwiecznych, niepisanych, 
-                                tkwiących w nas praw moralnych, boskich z pochodzenia i niewzruszalnych, którym sprzeniewierzyć się nie wolno, nawet gdy ceną za dochowanie im wierności staje się własne życie.</opis>
-                <data_publikacji>2013-01-01</data_publikacji>
-                <stron>77</stron>
-                <cena waluta="PLN">10,00zł</cena>
-            </książka>
-            <książka książkaAutorId="SO" id="dwudziesta_dziewiąta">
-                <tytuł>Król Edyp</tytuł>
-                <opis>Król Edyp Sofoklesa (V wiek p.n.e.), jeden z największych dramatów wszech czasów, przez Arystotelesa uznany za „najpiękniejszą tragedię”, mimo dwóch i pół tysiąca lat, 
-                                jakie upłynęły od jego powstania, wciąż jest utworem żywym i fascynującym, stale powracającym na scenę.</opis>
-                <data_publikacji>2012-01-01</data_publikacji>
-                <stron>136</stron>
-                <cena waluta="PLN">10,00zł</cena>
-            </książka>
-        </autor>
-        <autor autorId="JS"> Juliusz Słowacki
-            <książka książkaAutorId="JS" id="trzydziesta">
-                <tytuł>Balladyna</tytuł>
-                <opis>Jeden z najbardziej znanych dramatów Juliusza Słowackiego - opowieść o dwóch siostrach, Alinie i Balladynie, które, by rozstrzygnąć spór o rękę księcia Kirkora 
-                                postanawiają nazbierać w lesie malin. Jedno z najpopularniejszych wydań z opracowanej, ponadto napisane czcionką, ułatwiającą szybie czytanie.</opis>
-                <data_publikacji>2010-01-01</data_publikacji>
-                <stron>180</stron>
-                <cena waluta="PLN">10,00zł</cena>
-            </książka>
-            <książka książkaAutorId="JS" id="trzydziesta_pierwsza">
-                <tytuł>Kordian</tytuł>
-                <opis>Polska pod jarzmem cara - zbrodniarza. Patrioci planują na niego zamach. Jeden z nich, tajemniczy młodzieniec w masce, podejmuje się zabić znienawidzonego tyrana. 
-                                Wpisuje się tym samym w krąg działań, które zaplanował szatan u progu kolejnego stulecia.</opis>
-                <data_publikacji>2010-01-01</data_publikacji>
-                <stron>128</stron>
-                <cena waluta="PLN">10,00zł</cena>
-            </książka>
-        </autor>
-        <autor autorId="WS"> William Shakespeare
-            <książka książkaAutorId="WS" id="trzydziesta_druga">
-                <tytuł>Romeo i Julia</tytuł>
-                <opis>Romeo i Julia – dramat angielskiego pisarza Williama Szekspira napisany we wczesnym stadium jego kariery. Przedstawia historię tragicznej miłości dwojga młodych ludzi, 
-                                którzy stali się wzorcami romantycznych kochanków.</opis>
-                <data_publikacji>2016-05-01</data_publikacji>
-                <stron>160</stron>
-                <cena waluta="PLN">10,00zł</cena>  
-            </książka>
-        </autor>
-    </dział>        
-</księgarnia> 
+            </ksi:wiadomość>
+        </ksi:nazwa>
+        <ksi:autor autorId="SO"> Sofokles
+            <ksi:książka książkaAutorId="SO" id="dwudziesta_ósma">
+                <ksi:tytuł>Antygona</ksi:tytuł>
+                <ksi:opis>Antygona to dzieło o charakterze uniwersalnym niesie przekaz aktualny zawsze i wszędzie. Heroiczna bohaterka Sofoklesa przekonuje o istnieniu odwiecznych, niepisanych, 
+                    tkwiących w nas praw moralnych, boskich z pochodzenia i niewzruszalnych, którym sprzeniewierzyć się nie wolno, nawet gdy ceną za dochowanie im wierności staje się własne życie.</ksi:opis>
+                <ksi:dataPublikacji>2013-01-01</ksi:dataPublikacji>
+                <ksi:stron>77</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">10,00</ksi:cena>
+            </ksi:książka>
+            <ksi:książka książkaAutorId="SO" id="dwudziesta_dziewiąta">
+                <ksi:tytuł>Król Edyp</ksi:tytuł>
+                <ksi:opis>Król Edyp Sofoklesa (V wiek p.n.e.), jeden z największych dramatów wszech czasów, przez Arystotelesa uznany za „najpiękniejszą tragedię”, mimo dwóch i pół tysiąca lat, 
+                    jakie upłynęły od jego powstania, wciąż jest utworem żywym i fascynującym, stale powracającym na scenę.</ksi:opis>
+                <ksi:dataPublikacji>2012-01-01</ksi:dataPublikacji>
+                <ksi:stron>136</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">10,00</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>
+        <ksi:autor autorId="JS"> Juliusz Słowacki
+            <ksi:książka książkaAutorId="JS" id="trzydziesta">
+                <ksi:tytuł>Balladyna</ksi:tytuł>
+                <ksi:opis>Jeden z najbardziej znanych dramatów Juliusza Słowackiego - opowieść o dwóch siostrach, Alinie i Balladynie, które, by rozstrzygnąć spór o rękę księcia Kirkora 
+                    postanawiają nazbierać w lesie malin. Jedno z najpopularniejszych wydań z opracowanej, ponadto napisane czcionką, ułatwiającą szybie czytanie.</ksi:opis>
+                <ksi:dataPublikacji>2010-01-01</ksi:dataPublikacji>
+                <ksi:stron>180</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">10,00</ksi:cena>
+            </ksi:książka>
+            <ksi:książka książkaAutorId="JS" id="trzydziesta_pierwsza">
+                <ksi:tytuł>Kordian</ksi:tytuł>
+                <ksi:opis>Polska pod jarzmem cara - zbrodniarza. Patrioci planują na niego zamach. Jeden z nich, tajemniczy młodzieniec w masce, podejmuje się zabić znienawidzonego tyrana. 
+                    Wpisuje się tym samym w krąg działań, które zaplanował szatan u progu kolejnego stulecia.</ksi:opis>
+                <ksi:dataPublikacji>2010-01-01</ksi:dataPublikacji>
+                <ksi:stron>128</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">10,00</ksi:cena>
+            </ksi:książka>
+        </ksi:autor>
+        <ksi:autor autorId="WS"> William Shakespeare
+            <ksi:książka książkaAutorId="WS" id="trzydziesta_druga">
+                <ksi:tytuł>Romeo i Julia</ksi:tytuł>
+                <ksi:opis>Romeo i Julia – dramat angielskiego pisarza Williama Szekspira napisany we wczesnym stadium jego kariery. Przedstawia historię tragicznej miłości dwojga młodych ludzi, 
+                    którzy stali się wzorcami romantycznych kochanków.</ksi:opis>
+                <ksi:dataPublikacji>2016-05-01</ksi:dataPublikacji>
+                <ksi:stron>160</ksi:stron>
+                <ksi:cena ksi:waluta="PLN">10,00</ksi:cena>  
+            </ksi:książka>
+        </ksi:autor>
+    </ksi:dział>        
+</ksi:księgarnia> 
