@@ -74,7 +74,7 @@
             <xs:element name="nazwa" type="ksi:nazwaType" maxOccurs="1"/>
             <xs:element name="autor" type="ksi:autorType" maxOccurs="unbounded"/>                           
         </xs:sequence>             
-        <xs:attribute name="id" type="xs:string" use="required" />           
+        <xs:attribute name="id" type="xs:string" use="optional"/>           
     </xs:complexType> 
     
     <xs:complexType name="nazwaType" mixed="true">    
